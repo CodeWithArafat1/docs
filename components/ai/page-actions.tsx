@@ -39,22 +39,22 @@ export function LLMCopyButton({
     }
   });
 
-  // return (
-  //   <button
-  //     disabled={isLoading}
-  //     className={cn(
-  //       buttonVariants({
-  //         color: 'secondary',
-  //         size: 'sm',
-  //         className: 'gap-2 [&_svg]:size-3.5 [&_svg]:text-fd-muted-foreground',
-  //       }),
-  //     )}
-  //     onClick={onClick}
-  //   >
-  //     {checked ? <Check /> : <Copy />}
-  //     Copy Markdown
-  //   </button>
-  // );
+  return (
+    <button
+      disabled={isLoading}
+      className={cn(
+        buttonVariants({
+          color: 'secondary',
+          size: 'sm',
+          className: 'gap-2 [&_svg]:size-3.5 [&_svg]:text-fd-muted-foreground',
+        }),
+      )}
+      onClick={onClick}
+    >
+      {checked ? <Check /> : <Copy />}
+      Copy Markdown
+    </button>
+  );
 }
 
 export function ViewOptions({
