@@ -1,13 +1,78 @@
 ---
-title: Docs
-description: Your first document
+title: Installation & Setup
+description: A complete guide to setting up your Golang development environment.
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+import { Steps } from 'fumadocs-ui/components/steps';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 
-## What is Next?
+# Installation Roadmap
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
-</Cards>
+Follow this step-by-step guide to install Go and configure your workspace.
+
+<Steps/>
+
+### Download Go
+
+Visit the official website or use the terminal to download the file.
+
+<Tabs items={['Windows', 'macOS', 'Linux']}>
+
+  <Tab value="Windows">
+    Download the **.msi** installer from [go.dev/dl](https://go.dev/dl/).
+  </Tab>
+
+  <Tab value="macOS">
+    Download the **.pkg** installer from [go.dev/dl](https://go.dev/dl/).
+  </Tab>
+
+  <Tab value="Linux">
+    Download the latest tarball using `wget` (change version number if needed):
+    ```bash
+    wget [https://go.dev/dl/go1.23.0.linux-amd64.tar.gz](https://go.dev/dl/go1.23.0.linux-amd64.tar.gz)
+    ```
+  </Tab>
+
+</Tabs>
+
+### Install the Binary
+
+Follow the installation instructions for your OS.
+
+<Tabs items={['Windows', 'macOS', 'Linux']}>
+
+  <Tab value="Windows">
+    Double-click the `.msi` file and follow the prompts.
+  </Tab>
+
+  <Tab value="macOS">
+    Open the `.pkg` file and follow the prompts.
+  </Tab>
+
+  <Tab value="Linux">
+    **1. Remove previous installation:**
+    ```bash
+    sudo rm -rf /usr/local/go
+    ```
+
+    **2. Extract the new archive:**
+    ```bash
+    sudo tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz
+    ```
+
+    **3. Add to PATH:**
+    Add this line to your `$HOME/.profile` or `/etc/profile`:
+    ```bash
+    export PATH=$PATH:/usr/local/go/bin
+    ```
+    *Then run `source $HOME/.profile` to apply changes.*
+  </Tab>
+
+</Tabs>
+
+### Verify Installation
+
+Open your terminal and run the following command to make sure Go is installed:
+
+```bash
+go version

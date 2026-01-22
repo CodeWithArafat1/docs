@@ -1,3 +1,27 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+
+
+aside > div:first-child > a[href="/"] {
+  display: none !important;
+}
+
+aside .flex.flex-col.gap-1.mb-6 { 
+  display: none !important; 
+}
+aside nav.flex.flex-col {
+  display: none !important;
+}
+
+.fd-toc-link[data-active="true"] {
+  color: #fbbf24 !important; 
+  border-left-color: #fbbf24 !important; 
+  font-weight: 600;
+}
+
+
+.fd-toc-item {
+  border-left-width: 2px; 
+}
